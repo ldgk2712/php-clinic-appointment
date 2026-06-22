@@ -1,0 +1,15 @@
+[2026-06-22 20:08:00] SQLSTATE[HY093]: Invalid parameter number in D:\PHP\lab05\php-clinic-appointment\app\Repositories\AppointmentRepository.php:23
+#0 D:\PHP\lab05\php-clinic-appointment\app\Repositories\AppointmentRepository.php(23): PDOStatement->execute(Array)
+#1 D:\PHP\lab05\php-clinic-appointment\app\Controllers\AppointmentController.php(43): AppointmentRepository->countAll('APT')
+#2 D:\PHP\lab05\php-clinic-appointment\app\Core\Router.php(24): AppointmentController->index()
+#3 D:\PHP\lab05\php-clinic-appointment\public\index.php(64): Router->dispatch('GET', '/appointments?q...')
+#4 {main}
+
+[2026-06-22 20:18:28] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in D:\PHP\lab05\php-clinic-appointment\app\Core\Database.php:23
+#0 D:\PHP\lab05\php-clinic-appointment\app\Core\Database.php(23): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 D:\PHP\lab05\php-clinic-appointment\app\Controllers\PatientController.php(11): Database->__construct(Array)
+#2 D:\PHP\lab05\php-clinic-appointment\app\Controllers\PatientController.php(33): PatientController->repository()
+#3 D:\PHP\lab05\php-clinic-appointment\app\Core\Router.php(24): PatientController->index()
+#4 D:\PHP\lab05\php-clinic-appointment\public\index.php(64): Router->dispatch('GET', '/patients')
+#5 {main}
+
